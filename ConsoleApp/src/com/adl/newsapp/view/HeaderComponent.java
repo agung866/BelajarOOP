@@ -13,9 +13,8 @@ public class HeaderComponent extends Component{
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub
-		String header ="===================== \n" +
-				   "      "+this.getLabel()+"   \n" +
-				   "===================== \n";
+		String header =this.getLabel();
+				   
 			System.out.println(header);
 	}
 	

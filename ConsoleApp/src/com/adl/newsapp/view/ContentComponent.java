@@ -11,9 +11,7 @@ public class ContentComponent extends Component{
 	public void show() {
 		
 		// TODO Auto-generated method stub
-		String content ="===================== \n" +
-					   "|     "+"iniContent   |\n"+
-					   "===================== \n";
+		String content =getLabel();
 		System.out.println(content);
 	}
 }

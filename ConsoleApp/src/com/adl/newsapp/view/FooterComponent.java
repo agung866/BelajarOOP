@@ -12,9 +12,8 @@ public class FooterComponent extends Component {
 	public void show() {
 		
 		// TODO Auto-generated method stub
-		String footer ="===================== \n" +
-					   "      "+getLabel()+"    \n"+
-					   "===================== \n";
+		String footer =getLabel();
+					
 		System.out.println(footer);
 	}
 	

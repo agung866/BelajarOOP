@@ -24,8 +24,8 @@ public class Component {
 	
 	public void show() {
 		
-		System.out.println("nama +" +nama);
-		System.out.println("label "+label);
+		System.out.println(label);
+		
 		
 
 	}
