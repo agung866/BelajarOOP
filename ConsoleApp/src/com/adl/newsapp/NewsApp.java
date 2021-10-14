@@ -3,6 +3,7 @@ package com.adl.newsapp;
 import com.adl.newsapp.controller.QuizController;
 import com.adl.newsapp.interfaces.ActionListener;
 import com.adl.newsapp.model.ModelQuiz;
+import com.adl.newsapp.model.ModelQuizSoal;
 import com.adl.newsapp.view.Component;
 import com.adl.newsapp.view.ContentComponent;
 import com.adl.newsapp.view.FooterComponent;
@@ -19,12 +20,12 @@ public class NewsApp {
 		
 		List<String> soal=new ArrayList<String>();
 		
-		soal.add("multiplechoice;siapakah nama trainner JC;A.hanif#B.agung#C.Abdilah#D.anggito;A;20");
-		soal.add("esay;10+10=2 ?;20;20");
-		soal.add("esay;5+5=2 ?;10;20");
+//		soal.add("multiplechoice;siapakah nama trainner JC;A.hanif#B.agung#C.Abdilah#D.anggito;A;20");
+//		soal.add("esay;10+10=2 ?;20;20");
+//		soal.add("esay;5+5=2 ?;10;20");
 		
-		ModelQuiz model =new ModelQuiz();
-		model.setLstSoal(soal);
+		ModelQuizSoal model =new ModelQuizSoal("D:/quiz.txt");
+//		model.setLstSoal(soal);
 		
 		QuizController quiz = new QuizController(model);
 		quiz.showForm();
