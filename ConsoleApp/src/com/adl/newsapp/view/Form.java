@@ -1,4 +1,5 @@
 package com.adl.newsapp.view;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,4 +44,16 @@ public class Form {
 	public void setLstComponent(List<Component> lstComponent) {
 		this.lstComponent = lstComponent;
 	}
+	
+	public void clearScreen() {
+		try {
+			new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
 	}
+}

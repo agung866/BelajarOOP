@@ -24,7 +24,7 @@ public class NewsApp {
 //		soal.add("esay;10+10=2 ?;20;20");
 //		soal.add("esay;5+5=2 ?;10;20");
 		
-		ModelQuizSoal model =new ModelQuizSoal("D:/quiz.txt");
+		ModelQuizSoal model =new ModelQuizSoal(args[0]);
 //		model.setLstSoal(soal);
 		
 		QuizController quiz = new QuizController(model);
