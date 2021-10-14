@@ -13,7 +13,7 @@ public class FooterComponent extends Component {
 		
 		// TODO Auto-generated method stub
 		String footer ="===================== \n" +
-					   "      "+"iniFooter    \n"+
+					   "      "+getLabel()+"    \n"+
 					   "===================== \n";
 		System.out.println(footer);
 	}

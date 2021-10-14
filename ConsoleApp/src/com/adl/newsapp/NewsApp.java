@@ -7,6 +7,8 @@ import com.adl.newsapp.view.FooterComponent;
 import com.adl.newsapp.view.Form;
 import com.adl.newsapp.view.HeaderComponent;
 import com.adl.newsapp.view.InputComponent;
+import java.util.ArrayList;
+import java.util.List;
 
 public class NewsApp {
 
@@ -33,16 +35,23 @@ public class NewsApp {
 		form.addComponent(inputComponent);
 		form.showComponents();
 		
-		
-		inputComponent.setAction(new ActionListener() {
+		ActionListener action =new ActionListener() {
 			
 			@Override
-			public void onAction(Component component ) {
+			public void onAction(List<Component> lstcomponent ) {
 				// TODO Auto-generated method stub
-				component.setLabel(inputComponent.getValue());
-				form.showComponents();
+				for (Component component : lstcomponent) {
+					component.setLabel(inputComponent.getValue());
+				}
+				
 			}
-		},headerComponent1);
+		};
+		
+		inputComponent.addActionListener(headerComponent1);
+		inputComponent.addActionListener(footerComponent1);
+		inputComponent.onAction(action);
+		
+		form.showComponents();
 	}
 
 }

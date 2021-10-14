@@ -1,11 +1,14 @@
 package com.adl.newsapp.view;
 
 import com.adl.newsapp.interfaces.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Component {
 
 	private String nama;
 	private String label;
+	private List<Component> componentListener = new ArrayList<Component>();
 	
 	public Component() {
 		
@@ -50,15 +53,11 @@ public class Component {
 		this.label = label;
 	}
 
-	
-	
-
-
-	
-	public void setAction(ActionListener action,Component component) {
-		action.onAction(component);
-		
-		
+	public void addActionListener(Component component) {
+		this.componentListener.add(component);
+	}
+	public void onAction(ActionListener action) {
+		action.onAction(this.componentListener);
 	}
 
 
